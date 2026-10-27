@@ -12,10 +12,11 @@ import androidx.navigation.compose.rememberNavController
 import com.example.androidexample.ui.ui.Screebs.GestionReservasScreen
 import com.example.androidexample.ui.ui.Screebs.HomeScreen
 import com.example.androidexample.ui.ui.Screebs.LoginScreen
+import com.example.androidexample.ui.ui.Screebs.NuevaReservaScreen
 import com.example.androidexample.ui.ui.Screebs.NuevoMovimientoScreen
-import com.example.androidexample.ui.ui.Screebs.ProximamenteScreen
 import com.example.androidexample.ui.ui.Screebs.RegistroScreen
 import com.example.androidexample.ui.ui.Screebs.TransparenciaScreen
+import com.example.androidexample.ui.ui.Screebs.MisReservasScreen
 import com.example.androidexample.util.Sesion
 
 @Composable
@@ -54,8 +55,8 @@ fun NavGraph() {
                 }
             )
         }
-        composable(Rutas.NUEVA_RESERVA) { ProximamenteScreen("Nueva Reserva", onVolver = { nav.popBackStack() }) }
-        composable(Rutas.MIS_RESERVAS) { ProximamenteScreen("Mis Reservas", onVolver = { nav.popBackStack() }) }
+        composable(Rutas.NUEVA_RESERVA) { NuevaReservaScreen(onVolver = { nav.popBackStack() }) }
+        composable(Rutas.MIS_RESERVAS) { MisReservasScreen(onVolver = { nav.popBackStack() }) }
         composable(Rutas.GESTION_RESERVAS) { GestionReservasScreen(onVolver = { nav.popBackStack() }) }
         composable(Rutas.NUEVO_MOVIMIENTO) { NuevoMovimientoScreen(onVolver = { nav.popBackStack() }) }
         composable(Rutas.TRANSPARENCIA) { TransparenciaScreen(onVolver = { nav.popBackStack() }) }
